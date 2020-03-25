@@ -234,7 +234,7 @@ public class PDFSpider {
             String content = stripper.getText(document);
             document.close();
             //根据正则，获取邮箱地址
-            String check = "[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+";
+            String check = "[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)+";
             Pattern regex = Pattern.compile(check);
             Matcher matcher = regex.matcher(content);
             String emailList = null;

@@ -34,6 +34,7 @@ public class Spider {
         btnPdf.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //pdf爬虫
                 PDFSpider.getInstance().pdfSpider();
             }
         });
@@ -46,7 +47,7 @@ public class Spider {
         btnHtml.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: 2020/3/25 网页爬虫
+                // 网页爬虫
                 HtmlSpider.getInstance().htmlSpider();
             }
         });
