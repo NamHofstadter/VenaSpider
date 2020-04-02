@@ -208,11 +208,13 @@ public class HtmlSpider {
 
     private void matchHiddenEmail(List<String> emails, String html) {
         //qty ▇ whu.edu.cn
-        String check = "[a-zA-Z0-9_-]+[ ]▇[ ][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)+";
+        String check = "[a-zA-Z0-9_-]+[ ]*[▇#][ ]*[a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)+";
         Pattern regex = Pattern.compile(check);
         Matcher matcher = regex.matcher(html);
         while (matcher.find()) {
-            String group = matcher.group(0).replace(" ▇ ", "@");
+            String group = matcher.group(0).replace("▇", "@");
+            group = group.replace("#", "@");
+            group = group.replace(" ", "");
             if (!emails.contains(group)) {
                 emails.add(group);
                 System.out.println("Found value: " + group);
