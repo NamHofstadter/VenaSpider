@@ -131,7 +131,6 @@ public class HtmlSpider {
             public void run() {
                 try {
                     log.setText("正在解析" + url);
-                    URL urlU = new URL(url);
                     Document doc = Jsoup.connect(url).get();
                     Elements aTagList = doc.body().getElementsByTag("a");
                     List<String> urlList = new ArrayList<>();
@@ -167,7 +166,7 @@ public class HtmlSpider {
                     //进一步爬取已获取的二级url地址
                     parseSecondUrl(urlList);
 
-                } catch (IOException e1) {
+                } catch (Exception e1) {
                     log.setText("网址解析失败！");
                 }
                 btnParse.setEnabled(true);
@@ -186,7 +185,7 @@ public class HtmlSpider {
                 matchEmail(emails, html);
                 //根据正则，获取可能存在的隐藏邮箱地址
                 matchHiddenEmail(emails, html);
-            } catch (IOException e1) {
+            } catch (Exception e1) {
                 e1.printStackTrace();
             }
         }
