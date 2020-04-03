@@ -142,7 +142,15 @@ public class HtmlSpider {
                         }
                         System.out.println(tUrl);
                         if (!tUrl.startsWith("http")) {
-                            if (tUrl.startsWith("../")) {
+                            if (tUrl.startsWith("../../")) {
+                                //上级目录地址
+                                String subUrl = url.substring(0, url.lastIndexOf("/"));
+                                int i = subUrl.lastIndexOf("/");
+                                subUrl = subUrl.substring(0, i);
+                                int j = subUrl.lastIndexOf("/");
+                                tUrl = subUrl.substring(0, j)
+                                        + tUrl.replace("../../", "/");
+                            } else if (tUrl.startsWith("../")) {
                                 //上级目录地址
                                 String subUrl = url.substring(0, url.lastIndexOf("/"));
                                 int i = subUrl.lastIndexOf("/");

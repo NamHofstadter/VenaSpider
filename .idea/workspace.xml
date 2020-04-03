@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cab965b6-86ea-4235-9a18-1f7589cb167a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HtmlSpider$3.class" afterPath="$PROJECT_DIR$/out/production/classes/HtmlSpider$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HtmlSpider.class" afterPath="$PROJECT_DIR$/out/production/classes/HtmlSpider.class" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HtmlSpider.java" afterPath="$PROJECT_DIR$/src/main/java/HtmlSpider.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,7 +44,7 @@
       <file leaf-file-name="Spider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="573">
               <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
               <folding />
             </state>
@@ -56,8 +54,8 @@
       <file leaf-file-name="HtmlSpider.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/HtmlSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="210" column="0" lean-forward="true" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+            <state relative-caret-position="529">
+              <caret line="151" column="62" lean-forward="false" selection-start-line="151" selection-start-column="62" selection-end-line="151" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -849,12 +847,12 @@
       <workItem from="1585100185454" duration="11920000" />
       <workItem from="1585797544128" duration="733000" />
       <workItem from="1585821459526" duration="2049000" />
-      <workItem from="1585901683003" duration="1417000" />
+      <workItem from="1585901683003" duration="1727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34318000" />
+    <option name="totallyTimeSpent" value="34628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1680" height="953" extended-state="0" />
@@ -1251,7 +1249,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="573">
           <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding />
         </state>
@@ -1259,8 +1257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HtmlSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="210" column="0" lean-forward="true" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+        <state relative-caret-position="529">
+          <caret line="151" column="62" lean-forward="false" selection-start-line="151" selection-start-column="62" selection-end-line="151" selection-end-column="62" />
           <folding />
         </state>
       </provider>
