@@ -131,6 +131,7 @@ public class HtmlSpider {
             public void run() {
                 try {
                     log.setText("正在解析" + url);
+                    URL uUrl = new URL(url);
                     Document doc = Jsoup.connect(url).get();
                     Elements aTagList = doc.body().getElementsByTag("a");
                     List<String> urlList = new ArrayList<>();
@@ -147,11 +148,14 @@ public class HtmlSpider {
                                 int i = subUrl.lastIndexOf("/");
                                 tUrl = subUrl.substring(0, i)
                                         + tUrl.replace("../", "/");
+                            } else if (tUrl.startsWith("/")) {
+                                //标识根目录开始
+                                tUrl = uUrl.getProtocol() + "://" + uUrl.getHost() + tUrl;
                             } else {
                                 //同级目录地址
                                 String subUrl = url.substring(0, url.lastIndexOf("/"));
-                                if (tUrl.startsWith("/")) {
-                                    tUrl = subUrl + tUrl;
+                                if (tUrl.startsWith("./")) {
+                                    tUrl = subUrl + tUrl.replace("./", "/");
                                 } else {
                                     tUrl = subUrl + "/" + tUrl;
                                 }
