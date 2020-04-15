@@ -3,6 +3,7 @@ import org.apache.pdfbox.util.PDFTextStripper;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jsoup.helper.StringUtil;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
@@ -190,6 +191,11 @@ public class PDFSpider {
             textProgress.setText("当前处理进度：" + (i + 1) + "/" + list.size());
             Map<String, String> map = list.get(i);
             String link = map.get("link");
+            if (StringUtil.isBlank(link)) {
+                map.put("email", "");
+                newList.add(map);
+                continue;
+            }
             String fileName = link.substring(link.lastIndexOf("/"));
             try {
                 logArea.setText("开始下载pdf==>" + link);
@@ -311,7 +317,7 @@ public class PDFSpider {
         return wb;
     }
 
-     private Object getCellFormatValue(Cell cell) {
+    private Object getCellFormatValue(Cell cell) {
         Object cellValue = null;
         if (cell != null) {
             //判断cell类型
