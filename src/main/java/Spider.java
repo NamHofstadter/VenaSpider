@@ -55,6 +55,19 @@ public class Spider {
         btnHtmlPanel.add(btnHtml);
         frame.add(btnHtmlPanel);
 
+        JPanel scienceDirectHtmlPanel = new JPanel();
+        JButton scienceDirectHtmlBtn = new JButton("ScienceDirect Spider");
+        scienceDirectHtmlBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // ScienceDirect爬虫
+                ScienceDirectSpider.getInstance().htmlSpider();
+            }
+        });
+        scienceDirectHtmlBtn.setMargin(new Insets(10, 10, 10, 10));
+        scienceDirectHtmlPanel.add(scienceDirectHtmlBtn);
+        frame.add(scienceDirectHtmlPanel);
+
         frame.pack();
         frame.setVisible(true);
         frame.setBounds(600, 400, 500, 400);

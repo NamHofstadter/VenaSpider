@@ -48,7 +48,7 @@ public class PDFSpider {
     public void pdfSpider() {
         JFrame frame = new JFrame("Vena's pdf spider");
         frame.setLayout(new VFlowLayout());
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setBackground(Color.getColor("#F4F5F6"));
         frame.setResizable(false);
 
