@@ -160,10 +160,18 @@ public class ScienceDirectSpider {
                     for (Element li : aLiList) {
                         Element a = null;
                         try {
-                            a = li.getElementsByTag("dl").get(0)
-                                    .getElementsByTag("dt").get(0)
-                                    .getElementsByTag("h3").get(0)
-                                    .getElementsByTag("a").get(0);
+                            if (url.contains("search?")) {
+                                a = li.getElementsByTag("div").get(0)
+                                        .getElementsByTag("div").get(0)
+                                        .getElementsByTag("h2").get(0)
+                                        .getElementsByTag("span").get(0)
+                                        .getElementsByTag("a").get(0);
+                            } else {
+                                a = li.getElementsByTag("dl").get(0)
+                                        .getElementsByTag("dt").get(0)
+                                        .getElementsByTag("h3").get(0)
+                                        .getElementsByTag("a").get(0);
+                            }
                         } catch (Exception e) {
                             continue;
                         }
@@ -282,7 +290,11 @@ public class ScienceDirectSpider {
                                 authorName.append(" ").append(authorInfo.getString("_"));
                             }
                             if ("e-address".equals(innerName)) {
-                                authorEmail = authorInfo.getJSONObject("$").getString("href").replace("mailto:", "");
+                                try {
+                                    authorEmail = authorInfo.getJSONObject("$").getString("href").replace("mailto:", "");
+                                } catch (Exception e) {
+                                    System.out.println("该作者无邮箱信息");
+                                }
                             }
                         }
                         ScienceAuthorModel model = new ScienceAuthorModel();
