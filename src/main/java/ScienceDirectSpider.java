@@ -32,7 +32,6 @@ import java.util.regex.Pattern;
  * @create 2020-03-25 09:46
  */
 public class ScienceDirectSpider {
-    private static ScienceDirectSpider sInstance;
     private JTextField fieldHtml;
     private JTextArea log;
     private JButton btnParse;
@@ -41,16 +40,6 @@ public class ScienceDirectSpider {
 
 
     private List<ScienceAuthorModel> authorList = new ArrayList<>();
-
-    private ScienceDirectSpider() {
-    }
-
-    public static ScienceDirectSpider getInstance() {
-        if (sInstance == null) {
-            sInstance = new ScienceDirectSpider();
-        }
-        return sInstance;
-    }
 
     public void htmlSpider() {
         JFrame frame = new JFrame("Vena's html spider");

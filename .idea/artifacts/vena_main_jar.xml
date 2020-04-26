@@ -4,20 +4,21 @@
     <root id="root">
       <element id="archive" name="vena_main.jar">
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$USER_HOME$/Desktop/jars/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
         </element>
         <element id="module-output" name="vena_main" />
       </element>
-      <element id="library" level="project" name="Gradle: org.apache.commons:commons-collections4:4.1" />
-      <element id="library" level="project" name="Gradle: org.apache.poi:poi-ooxml-schemas:3.17" />
       <element id="library" level="project" name="Gradle: org.apache.xmlbeans:xmlbeans:2.6.0" />
-      <element id="library" level="project" name="Gradle: org.jsoup:jsoup:1.9.2" />
-      <element id="library" level="project" name="Gradle: stax:stax-api:1.0.1" />
-      <element id="library" level="project" name="Gradle: org.apache.poi:poi:3.17" />
-      <element id="library" level="project" name="Gradle: org.apache.poi:poi-ooxml:3.17" />
-      <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.10" />
+      <element id="library" level="project" name="Gradle: com.alibaba:fastjson:1.2.47" />
+      <element id="library" level="project" name="Gradle: org.apache.poi:poi-ooxml-schemas:3.17" />
       <element id="library" level="project" name="Gradle: com.github.virtuald:curvesapi:1.04" />
+      <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.10" />
+      <element id="library" level="project" name="Gradle: org.jsoup:jsoup:1.9.2" />
       <element id="library" level="project" name="Gradle: org.apache.pdfbox:pdfbox-app:1.8.10" />
+      <element id="library" level="project" name="Gradle: org.apache.poi:poi-ooxml:3.17" />
+      <element id="library" level="project" name="Gradle: org.apache.commons:commons-collections4:4.1" />
+      <element id="library" level="project" name="Gradle: org.apache.poi:poi:3.17" />
+      <element id="library" level="project" name="Gradle: stax:stax-api:1.0.1" />
     </root>
   </artifact>
 </component>

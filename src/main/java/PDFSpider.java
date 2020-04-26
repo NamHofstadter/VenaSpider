@@ -27,17 +27,6 @@ import java.util.regex.Pattern;
  * @create 2020-03-25 09:46
  */
 public class PDFSpider {
-    private static PDFSpider sInstance;
-
-    private PDFSpider() {
-    }
-
-    public static PDFSpider getInstance() {
-        if (sInstance == null) {
-            sInstance = new PDFSpider();
-        }
-        return sInstance;
-    }
 
     private JTextArea textFilePath;
     private JButton btnParse;

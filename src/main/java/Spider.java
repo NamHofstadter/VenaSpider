@@ -35,7 +35,7 @@ public class Spider {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //pdf爬虫
-                PDFSpider.getInstance().pdfSpider();
+                new PDFSpider().pdfSpider();
             }
         });
         btnPdf.setMargin(new Insets(10, 10, 10, 10));
@@ -48,7 +48,7 @@ public class Spider {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // 网页爬虫
-                HtmlSpider.getInstance().htmlSpider();
+                new HtmlSpider().htmlSpider();
             }
         });
         btnHtml.setMargin(new Insets(10, 10, 10, 10));
@@ -61,7 +61,7 @@ public class Spider {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // ScienceDirect爬虫
-                ScienceDirectSpider.getInstance().htmlSpider();
+                new ScienceDirectSpider().htmlSpider();
             }
         });
         scienceDirectHtmlBtn.setMargin(new Insets(10, 10, 10, 10));

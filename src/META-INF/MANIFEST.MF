@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: xmlbeans-2.6.0.jar fastjson-1.2.47.jar poi-ooxml-schemas-3
+ .17.jar curvesapi-1.04.jar commons-codec-1.10.jar jsoup-1.9.2.jar pdf
+ box-app-1.8.10.jar poi-ooxml-3.17.jar commons-collections4-4.1.jar po
+ i-3.17.jar stax-api-1.0.1.jar
+Main-Class: EmailSpider
+

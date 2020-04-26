@@ -25,21 +25,10 @@ import java.util.regex.Pattern;
  * @create 2020-03-25 09:46
  */
 public class HtmlSpider {
-    private static HtmlSpider sInstance;
     private JTextField fieldHtml;
     private JTextArea log;
     private JButton btnParse;
     private List<String> emails = new ArrayList<>();
-
-    private HtmlSpider() {
-    }
-
-    public static HtmlSpider getInstance() {
-        if (sInstance == null) {
-            sInstance = new HtmlSpider();
-        }
-        return sInstance;
-    }
 
     public void htmlSpider() {
         JFrame frame = new JFrame("Vena's html spider");
